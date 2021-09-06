@@ -1,0 +1,17 @@
+div.IPTracker-container {
+  display: flex;
+  margin: 50vh auto;
+  width: 30%;
+}
+#IPTracker-input {
+  font-size: 18px;
+  width: 100%;
+  padding-left: 1rem;
+}
+#IPTracker-button {
+  background: black;
+  color: white;
+  padding: 13px;
+  border: none;
+  border-radius: 0% 10% 10% 0%;
+}
