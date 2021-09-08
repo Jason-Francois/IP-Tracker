@@ -1,0 +1,30 @@
+.IPDashboard-container {
+  display: flex;
+  border: 1px solid red;
+  width: 70%;
+  align-items: flex-start;
+  padding: 40px 0px;
+}
+.IPDashboard-item {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid grey;
+  font-weight: 500;
+  font-size: 18px;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 40px;
+  &:last-child {
+    border: 0;
+  }
+}
+
+.IPDashboard-item-header {
+  color: grey;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+}

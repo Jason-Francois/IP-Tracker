@@ -1,7 +1,6 @@
-div.IPTracker-container {
+div.IDTracker-input-container {
   display: flex;
-  margin: 50vh auto;
-  width: 30%;
+  width: 50%;
 }
 #IPTracker-input {
   font-size: 18px;
@@ -14,4 +13,5 @@ div.IPTracker-container {
   padding: 13px;
   border: none;
   border-radius: 0% 10% 10% 0%;
+  cursor: pointer;
 }

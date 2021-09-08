@@ -7,7 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-input[type="text"], button {
+input[type="text"],
+button,
+body {
   font-size: 18px;
   font-family: "Rubik", sans-serif;
 }
