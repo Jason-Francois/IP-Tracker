@@ -1,9 +1,11 @@
 import "./styles/App.scss";
 import IPTracker from "./components/IPHeader";
+import Map from "./components/Map";
 function App() {
   return (
     <div>
-      <IPTracker />
+      {/* <IPTracker /> */}
+      <Map />
     </div>
     // <div className="App">
     //   <div>
