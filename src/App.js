@@ -1,10 +1,12 @@
 import "./styles/App.scss";
 import IPTracker from "./components/IPHeader";
+import { IPMap } from "./components/IPMap";
 function App() {
   return (
     <div>
       <IPTracker />
     </div>
+
     // <div className="App">
     //   <div>
     //     IP Address Tracker Search for any IP address or domain IP Address

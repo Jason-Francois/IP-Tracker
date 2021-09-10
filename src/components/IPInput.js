@@ -31,6 +31,9 @@ export default function IPInput() {
   };
   return (
     <div className="IPTracker-container">
+      <div className="IPTracker-header">
+        <h3>IP Address Tracker</h3>
+      </div>
       <div className="IDTracker-input-container">
         <input
           id="IPTracker-input"

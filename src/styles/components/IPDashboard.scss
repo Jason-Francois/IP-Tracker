@@ -1,9 +1,10 @@
 .IPDashboard-container {
   display: flex;
   border: 1px solid red;
-  width: 70%;
+  width: 100%;
   align-items: flex-start;
   padding: 40px 0px;
+  background: white;
 }
 .IPDashboard-item {
   display: flex;

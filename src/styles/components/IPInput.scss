@@ -1,6 +1,14 @@
+.IPTracker-container {
+  background: rgb(191, 218, 164);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
 div.IDTracker-input-container {
   display: flex;
-  width: 50%;
+  width: 100%;
+  margin-bottom: 3rem;
 }
 #IPTracker-input {
   font-size: 18px;
