@@ -34,9 +34,9 @@ export default function IPInput() {
       <div className="IPTracker-header">
         <h3>IP Address Tracker</h3>
       </div>
-      <div className="IDTracker-input-container">
+      <div className="IPTracker-input-container">
         <input
-          id="IPTracker-input"
+          className="IPTracker-input"
           type="text"
           placeholder="Search any IP Address or Domain"
           onChange={handleChange}

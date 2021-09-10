@@ -8,7 +8,7 @@ import {
 
 function Map() {
   return (
-    <GoogleMap defaultZoom={10} defaultCenter={{ lat: 39.9526, lng: -75.1652 }}>
+    <GoogleMap defaultZoom={12} defaultCenter={{ lat: 39.9526, lng: -75.1652 }}>
       <Marker
         position={{ lat: 39.9526, lng: -75.1652 }}
         icon={{
@@ -31,7 +31,7 @@ function IPMap() {
         googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_MAPS_KEY}`}
         loadingElement={<div style={{ height: `100vh` }} />}
         containerElement={<div style={{ height: `100vhvh` }} />}
-        mapElement={<div style={{ height: `50vh` }} />}
+        mapElement={<div style={{ height: `100vh` }} />}
       />
     </div>
   );

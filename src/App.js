@@ -5,6 +5,7 @@ function App() {
   return (
     <div>
       <IPTracker />
+      <IPMap />
     </div>
 
     // <div className="App">

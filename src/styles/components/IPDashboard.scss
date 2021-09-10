@@ -1,10 +1,14 @@
 .IPDashboard-container {
   display: flex;
-  border: 1px solid red;
-  width: 100%;
+  max-width: 700px;
   align-items: flex-start;
   padding: 40px 0px;
-  background: white;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  border-radius: 10px;
+  position: absolute;
+  top: 10rem;
+  z-index: 2;
 }
 .IPDashboard-item {
   display: flex;
@@ -15,6 +19,10 @@
   justify-content: center;
   padding-left: 20px;
   padding-right: 40px;
+  padding-bottom: 10px;
+  &:first-child {
+    padding-right: 70px;
+  }
   &:last-child {
     border: 0;
   }
