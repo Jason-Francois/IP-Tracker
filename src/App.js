@@ -1,11 +1,9 @@
 import "./styles/App.scss";
-import IPTracker from "./components/IPHeader";
-import { IPMap } from "./components/IPMap";
+import IPTracker from "./components/IPTracker";
 function App() {
   return (
     <div>
       <IPTracker />
-      <IPMap />
     </div>
 
     // <div className="App">
