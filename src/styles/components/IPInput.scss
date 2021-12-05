@@ -1,10 +1,23 @@
-div.IDTracker-input-container {
+.IPTracker-container {
+  padding-top: 50px;
+  background: url("../../pattern-bg.png");
   display: flex;
-  width: 50%;
-}
-#IPTracker-input {
-  font-size: 18px;
   width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.IPTracker-header {
+  color: white;
+  margin-bottom: 2rem;
+}
+.IPTracker-input-container {
+  display: flex;
+  margin-bottom: 3rem;
+}
+.IPTracker-input {
+  font-size: 18px;
+  width: 450px;
   padding-left: 1rem;
 }
 #IPTracker-button {
@@ -14,4 +27,7 @@ div.IDTracker-input-container {
   border: none;
   border-radius: 0% 10% 10% 0%;
   cursor: pointer;
+}
+.IPMap-container {
+  height: 100vh;
 }
