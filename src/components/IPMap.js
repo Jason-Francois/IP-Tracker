@@ -8,8 +8,7 @@ import {
 
 
 
-function Map(props) {
-  console.log(props);
+const Map = (props) => {
   return (
     <GoogleMap defaultZoom={12} center={{ lat: parseFloat(props.location.lat), lng: parseFloat(props.location.long) }}>
       <Marker
@@ -27,7 +26,7 @@ function Map(props) {
 
 const WrappedMap = withScriptjs(withGoogleMap((props) => <Map {...props} />));
 
-function IPMap(props) {
+const IPMap = (props) => {
   return (
     <div className="IPMap-container" style={{ height: "100vh", width: "100%" }}>
       <WrappedMap

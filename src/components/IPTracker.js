@@ -1,12 +1,7 @@
-import "../styles/components/IPInput.scss";
 import React from "react";
 import IPDashboard from "./IPDashboard";
 import { IPMap } from "./IPMap";
 const axios = require("axios");
-
-function convertStringToFloat(float) {
-  return parseFloat(float);
-}
 
 export default function IPInput() {
   const [ipAddress, setipAddress] = React.useState("");
@@ -28,7 +23,7 @@ export default function IPInput() {
         `https://geo.ipify.org/api/v1?apiKey=at_11zWGseUeMiC4iVAGE9V4tMlqdfMT&ipAddress=${ipAddress}`
       )
       .then((response) => {
-        console.log(response.data)
+        console.log(response.data);
         return response.data;
       })
       .then((data) => {
@@ -39,31 +34,37 @@ export default function IPInput() {
         setTimeZone(`UTC ${data.location.timezone}`);
         setISP(data.isp);
       })
-      .catch((err) => alert(err));
+      .catch(() => alert("IP Address Not Valid."));
   };
   return (
-    <div className="IPTracker-container">
-      <div className="IPTracker-header">
-        <h3>IP Address Tracker</h3>
+    <div>
+      <div className="IPTracker__container">
+        <div className="IPTracker__content">
+          <div className="IPTracker__header">
+            <h3>IP Address Tracker</h3>
+          </div>
+          <div className="IPTracker__wrapper">
+            <div className="IPTracker__input-container">
+              <input
+                className="IPTracker__input"
+                type="text"
+                placeholder="Search any IP Address or Domain"
+                onChange={handleChange}
+              ></input>
+              <button id="IPTracker__button" onClick={handleClick}>
+                {">"}
+              </button>
+            </div>
+          </div>
+          <IPDashboard
+            ip={ipAddress}
+            location={locationString}
+            timeZone={timeZone}
+            isp={isp}
+          />
+        </div>
+        <IPMap location={{ lat: location.lat, long: location.long }} />
       </div>
-      <div className="IPTracker-input-container">
-        <input
-          className="IPTracker-input"
-          type="text"
-          placeholder="Search any IP Address or Domain"
-          onChange={handleChange}
-        ></input>
-        <button id="IPTracker-button" onClick={handleClick}>
-          {">"}
-        </button>
-      </div>
-      <IPDashboard
-        ip={ipAddress}
-        location={locationString}
-        timeZone={timeZone}
-        isp={isp}
-      />
-      <IPMap location={{ lat: location.lat, long: location.long }} />
     </div>
   );
 }

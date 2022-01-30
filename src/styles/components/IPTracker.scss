@@ -1,0 +1,45 @@
+@use "../globals/" as *;
+.IPTracker {
+  &__container {
+    background: $bg center;
+  }
+  &__content {
+    margin: 0 auto;
+    max-width: 70rem;
+    text-align: center;
+    padding: 0 1.5rem;
+    position: relative;
+    padding-top: 1.875rem;
+    padding-bottom: 7rem;
+  }
+  &__header {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+  &__input-container {
+    display: flex;
+    max-width: 34.375rem;
+    border-radius: 100px;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+  }
+  &__input {
+    width: 82%;
+    padding-block: 1.125rem;
+    padding-left: 1.5rem;
+    border: none;
+    border-radius: 0.625rem 0 0 0.625rem;
+  }
+}
+#IPTracker__button {
+  width: 18%;
+  padding: 1.25rem;
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 0.625rem 0.625rem 0;
+  font-size: 20px;
+}
