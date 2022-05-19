@@ -4,10 +4,10 @@ import { IPMap } from "./IPMap";
 const axios = require("axios");
 
 export default function IPInput() {
-  const [ipAddress, setipAddress] = React.useState("");
+  const [ipAddress, setipAddress] = React.useState("170.115.187.68");
   const [location, setLocation] = React.useState({
     lat: 39.9526,
-    long: -75.1652,
+    lng: -75.1652,
   });
   const [locationString, setLocationString] = React.useState("");
   const [timeZone, setTimeZone] = React.useState("");
@@ -16,26 +16,33 @@ export default function IPInput() {
   const handleChange = (e) => {
     setipAddress(e.target.value);
   };
+
+  async function fetchData() {
+    try {
+      const response = await axios.get(
+        `https://geo.ipify.org/api/v1?apiKey=at_11zWGseUeMiC4iVAGE9V4tMlqdfMT&ipAddress=${ipAddress}`
+      );
+      const data = await response.data;
+      setLocation({ lat: data.location.lat, lng: data.location.lng });
+      setLocationString(
+        `${data.location.city}, ${data.location.region}, ${data.location.postalCode}`
+      );
+      setTimeZone(`UTC ${data.location.timezone}`);
+      setISP(data.isp);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
   // When button is clicked, populate fields on dashboard
   const handleClick = () => {
-    axios
-      .get(
-        `https://geo.ipify.org/api/v1?apiKey=at_11zWGseUeMiC4iVAGE9V4tMlqdfMT&ipAddress=${ipAddress}`
-      )
-      .then((response) => {
-        console.log(response.data);
-        return response.data;
-      })
-      .then((data) => {
-        setLocation({ lat: data.location.lat, long: data.location.lng });
-        setLocationString(
-          `${data.location.city}, ${data.location.region}, ${data.location.postalCode}`
-        );
-        setTimeZone(`UTC ${data.location.timezone}`);
-        setISP(data.isp);
-      })
-      .catch(() => alert("IP Address Not Valid."));
+    debugger;
+    fetchData();
   };
+  React.useEffect(() => {
+    fetchData();
+    document.querySelector(".IPTracker__input").value = ipAddress;
+  }, []);
   return (
     <div>
       <div className="IPTracker__container">
@@ -63,7 +70,7 @@ export default function IPInput() {
             isp={isp}
           />
         </div>
-        <IPMap location={{ lat: location.lat, long: location.long }} />
+        <IPMap location={{ lat: location.lat, lng: location.lng }} />
       </div>
     </div>
   );
