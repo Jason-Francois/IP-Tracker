@@ -21,7 +21,7 @@ export default function IPInput() {
   async function fetchData() {
     try {
       const response = await axios.get(
-        `https://geo.ipify.org/api/v1?apiKey=${process.env.IPIFY_API_KEY}&ipAddress=${ipAddress}`
+        `https://geo.ipify.org/api/v1?apiKey=${process.env.REACT_APP_IPIFY_API_KEY}&ipAddress=${ipAddress}`
       );
       const data = await response.data;
       setLocation({ lat: data.location.lat, lng: data.location.lng });

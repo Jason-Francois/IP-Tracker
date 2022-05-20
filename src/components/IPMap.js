@@ -5,7 +5,7 @@ const containerStyle = {
   height: "100%",
 };
 
-const apiKey = process.env.REACT_GOOGLE_MAPS_KEY;
+const apiKey = process.env.REACT_APP_GOOGLE_MAPS_KEY;
 const Map = (props) => {
   return (
     <LoadScript googleMapsApiKey={apiKey}>
