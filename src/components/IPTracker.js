@@ -37,7 +37,6 @@ export default function IPInput() {
 
   // When button is clicked, populate fields on dashboard
   const handleClick = () => {
-    debugger;
     fetchData();
   };
   React.useEffect(() => {

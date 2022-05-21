@@ -7,13 +7,21 @@ const containerStyle = {
 
 const apiKey = process.env.REACT_APP_GOOGLE_MAPS_KEY;
 const Map = (props) => {
+  const center = {
+    lat: props.location.lat,
+    lng: props.location.lng,
+  };
+  const icon = {
+    url: "/icon-location.svg",
+    anchor: { x: 0, y: 0 },
+    origin: { x: 0, y: 0 },
+    scaledSize: { width: 20, height: 25 },
+  };
   return (
     <LoadScript googleMapsApiKey={apiKey}>
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={{ lat: props.location.lat, lng: props.location.lng }}
-        zoom={10}
-      ></GoogleMap>
+      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
+        <Marker position={center} icon={icon} />
+      </GoogleMap>
     </LoadScript>
   );
 };
