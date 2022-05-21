@@ -25,6 +25,8 @@
   &__item {
     width: 80%;
     @include mq(lg) {
+      height: 125px;
+      overflow: auto;
       align-self: flex-start;
       flex-direction: row;
       justify-content: space-around;
