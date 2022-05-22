@@ -46,4 +46,4 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ## Author
 - Frontend Mentor - [Jason-Francois](https://www.frontendmentor.io/profile/Jason-Francois)
-- [LinkedIn](www.linkedin.com/in/jasonc-francois)
+- LinkedIn - [jasonc-francois](www.linkedin.com/in/jasonc-francois)
