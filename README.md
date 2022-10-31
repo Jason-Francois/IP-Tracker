@@ -23,7 +23,7 @@ To use this application, simply enter a valid IPv4 address into the input field 
 ![](./IPTracker.png)
 
 ### Links
-- Live Site URL: <a href="https://ip-tracker-jason-francois.vercel.app/" target="_blank">Link</a>
+- Live Site: <a href="https://ip-tracker-jason-francois.vercel.app/" target="_blank">Link</a>
 
 ### Built with
 
