@@ -2,6 +2,7 @@
 .IPTracker {
   &__container {
     background: $bg center;
+    background-size: contain;
   }
   &__content {
     margin: 0 auto;
