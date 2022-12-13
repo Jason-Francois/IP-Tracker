@@ -16,7 +16,7 @@ This is a single-page React-based application that allows users to view the loca
 To fetch data for the IP's, this app uses the ipify API and for displaying the IP's location, this app uses the Google Maps API.
 
 ## Tutorial
-To use this application, simply enter a valid IPv4 address into the input field and press enter. The map will then be rendered to show the location of the entered IP address.
+To use this application, simply enter a valid **public** IPv4 address into the input field and press enter. The map will then be rendered to show the location of the entered IP address.
 
 ### Screenshot
 
